@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MYWISH E-Commerce</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+ <header>
+  <h1>MYWISH</h1>
+  <div class="header-bottom">
+    <div class="search-filter">
+      <input type="text" id="search" placeholder="Search products...">
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="electronics">Electronics</option>
+        <option value="clothing">Clothing</option>
+        <option value="household">Household</option>
+        <option value="books">Books</option>
+      </select>
+    </div>
+    <button id="cartBtn">🛒 Cart (<span id="cartCount">0</span>)</button>
+  </div>
+</header>
+
+
+  <!-- Banners & Product Groups -->
+  <main>
+    <h2>Electronics</h2>
+    <section id="electronics" class="product-group"></section>
+
+    <h2>Clothing</h2>
+    <section id="clothing" class="product-group"></section>
+
+    <h2>Household</h2>
+    <section id="household" class="product-group"></section>
+
+    <h2>Books</h2>
+    <section id="books" class="product-group"></section>
+  </main>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Your Cart</h2>
+      <div id="cartItems"></div>
+      <h3>Total: $<span id="cartTotal">0</span></h3>
+      <button id="checkoutBtn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div id="checkoutModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Checkout</h2>
+      <form id="checkoutForm">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="address" placeholder="Address" required>
+        <button type="submit">Place Order</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+  <!-- About Section -->
+  <section>
+    <h4>About Us</h4>
+    <p>MYWISH is your one-stop online shop for electronics, clothing, books, and household items. We bring you the best products at great prices!</p>
+  </section>
+
+  <!-- Customer Support Section -->
+  <section>
+    <h4>Customer Support</h4>
+    <ul>
+      <li><a href="#">Help Center</a></li>
+      <li><a href="#">Shipping & Delivery</a></li>
+      <li><a href="#">Returns & Refunds</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </section>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
